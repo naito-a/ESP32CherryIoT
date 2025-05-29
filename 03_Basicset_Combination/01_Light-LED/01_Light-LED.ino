@@ -17,7 +17,7 @@ void loop() {
   Serial.print(" Lux : ");
   
   // Change the threshold to suit your environment
-  if (lux > 20) { 
+  if (lux > 300) { 
     digitalWrite(ledPin, LOW); //OFF
     Serial.println("Bright");
     delay(500);
