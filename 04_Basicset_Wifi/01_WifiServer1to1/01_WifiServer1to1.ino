@@ -3,10 +3,10 @@
 #include<WiFi.h>
 const int ledPin = 3; //3:ConnectorA 4:ConnectorB
 
-const char *ssid="ESP32-WiFi-1";
+const char *ssid="ESP32-WiFi-1"; //const値を変えない
 const char *pass="esp32wifi";
 
-const IPAddress ip(192,168,0,1);
+const IPAddress ip(192,168,0,1);　//ローカルなのでなんでもいい
 const IPAddress subnet(255,255,255,0);
 WiFiServer server(80);
 

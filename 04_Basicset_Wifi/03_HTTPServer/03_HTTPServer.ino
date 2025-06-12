@@ -2,8 +2,8 @@
 #include <WiFi.h>
 const int ledPin = 3; //3:ConnectorA 4:ConnectorB
 
-const char* ssid = "xxxxx";
-const char* password = "xxxxx";
+const char* ssid = "AP01-02";
+const char* password = "1qaz2wsx";
  
 WiFiServer server(80);
  

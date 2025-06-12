@@ -1,22 +1,20 @@
-const int litsnsrPin = 3; //3:ConnectorA 4:ConnectorB
-const int ledPin = 4; //3:ConnectorA 4:ConnectorB 10:Builtin
+const int motorPin = 3; //3:ConnectorA 4:ConnectorB
+const int swPin = 4; //3:ConnectorA 4:ConnectorB 10:Builtin
 
 void setup() {
   Serial.begin(115200);
-  pinMode(litsnsrPin, INPUT);
-  pinMode(ledPin, OUTPUT);
+  pinMode(swPin, INPUT);;
+  pinMode(motorPin, OUTPUT);
 }
 
-void loop() { 
-  float litsnsr_ad = analogRead(litsnsrPin); // Read analog data
-  float litsnsr_v = litsnsr_ad * 3.3 / 4096; // Calculation of voltage value
-  float lux = 10000 * litsnsr_v / (3.3 - litsnsr_v) / 1000; // Calculation of lux value
-
-  if (lux < 700 == LOW) {
-    digitalWrite(ledPin, LOW); //ON
-    delay(300);
+void loop() {
+  if (digitalRead(swPin) == HIGH) {
+    Serial.println("Pushed"); 
+    digitalWrite(motorPin, HIGH);
+    delay(500);
   } else {
-    digitalWrite(ledPin,HIGH); //OFF
-    delay(300);
+    Serial.println("Not Pushed");
+    digitalWrite(motorPin, LOW);
+    delay(500);
   }
 }

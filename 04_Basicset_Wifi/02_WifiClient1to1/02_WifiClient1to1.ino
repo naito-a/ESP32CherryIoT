@@ -2,7 +2,7 @@
 
 const int litsnsrPin = 3; //3:ConnectorA 4:ConnectorB
 
-const char *ssid="ESP32-WiFi-1";
+const char *ssid="ESP32-WiFi-3";
 const char *pass="esp32wifi";
 static WiFiClient client;
 
@@ -18,7 +18,7 @@ void setup() {
     delay(1000);
   }
   Serial.println("WiFi Connected");
-  IPAddress ip(192,168,0,1);  //Server's IP address
+  IPAddress ip(192,168,0,3);  //Server's IP address
   client.connect(ip,80);
 }
 
