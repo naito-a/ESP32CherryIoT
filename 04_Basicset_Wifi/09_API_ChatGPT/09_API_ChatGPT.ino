@@ -4,9 +4,9 @@
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 
-const char* ssid = "xxxxx";
-const char* password = "xxxxx";
-String openaiKey = "xxxxxxxxxxxxxxxxxx";
+const char* ssid = "XXXXXXXX";
+const char* password = "XXXX";
+String openaiKey = "XXXXXX";
 
 //ChatGPT
 String role = "You are a helpful assistant.";
@@ -17,8 +17,7 @@ String historical_messages = system_content;
 void setup() {
   Serial.begin(115200);
   connectWiFi();
-  Serial.println(openAI_chat("私は山梨県に住んでいます。"));
-  Serial.println(openAI_chat("私の地域で有名なものを教えてください。"));
+  Serial.println(openAI_chat("おいしいものを教えてください。なにがおすすめですか。"));
 }
 
 void loop() {
